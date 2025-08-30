@@ -2,6 +2,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from .core.config import settings
 
+from routes import job , story
+
 
 
 app = FastAPI(
@@ -20,6 +22,11 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+#aggregate the routes 
+
+app.include_router(job.router , prefix = settings.API_PREFIX)
+app.include_router(story.router , prefix = settings.API_PREFIX)
 
 #to run the server
 
