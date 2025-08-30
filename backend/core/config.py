@@ -8,15 +8,12 @@ from Typing import list
 from pydantic import filed_validators
 
 
-
-
-
 class Settings(BaseSettings):
     DATABASE_URL: str
     API_PREFIX: str = "/api"
-    ALLOWED_ORIGIN :str = ""
+    ALLOWED_ORIGIN : str = ""
     DEBUG:bool = True
-    OPENAI_API_KEY:str = ""
+    OPENAI_API_KEY :str = ""
     
 
 

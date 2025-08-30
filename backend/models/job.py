@@ -10,12 +10,11 @@
 
 
 
-from sqlachemy import Column, Integer,String , JSON , ForeignKey , DateTime
+from sqlachemy import Column, Integer , String , JSON , ForeignKey , DateTime
 from sqlachemy.orm import relationship
 from sqlachemy.sql import func
 
 from database.database import Base
-
 
 
 class storyJob(Base):
@@ -23,7 +22,7 @@ class storyJob(Base):
 
     id = Column(Integer, primary_key=True)
     job_id = Column(String(256), unique=True , index = True)
-    theme = Column(String(100) , nullable=False)
+    theme = Column(String(100), nullable=False)
     sessiona_id = Column(String())
     story_id = Column(String())
     error = Column(String())

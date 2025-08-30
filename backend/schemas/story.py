@@ -13,7 +13,9 @@ class StoryNodeBase(BaseModel):
     is_ending: bool = False
     is_winning_ending: bool = False
 
-#this sithe response which will be actually look on th efrontnet 
+#  this sithe response which will be actually look on th efrontnet 
+
+
 class CompleteStoryNodeResponse(StoryNodeBase):
     id: int
     options: List[StoryOptionsSchema] = []
