@@ -132,14 +132,14 @@ from datetime import datetime
 from sqlalchemy.orm import Session
 import uuid
 
-from database.database import get_db, SessionLocal
-from model.story import StoryNode, Story
-from model.job import StoryJob
-from schemas.story import (
+from ..database import get_db, SessionLocal
+from ..models.story import StoryNode, Story
+from ..models.job import StoryJob
+from ..schemas.story import (
     CompleteStoryResponse, CompleteStoryNodeResponse, CompleteStoryRequest
 )
-from schemas.job import StoryJobResponse
-from schemas.story_schema import StoryCreateSchema, StoryUpdateSchema
+from ..schemas.job import StoryJobResponse
+from ..schemas.story_schema import StoryCreateSchema, StoryUpdateSchema
 
 router = APIRouter(
     prefix="/story",

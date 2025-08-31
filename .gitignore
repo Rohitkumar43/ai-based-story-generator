@@ -1,0 +1,11 @@
+.qodo
+
+# Virtual envs
+venv/
+.venv/
+env/
+backend/venv/
+**/venv/
+**/.venv/
+**/env/
+

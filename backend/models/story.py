@@ -17,7 +17,7 @@ class story():
 
     creaded_at = Column(DateTime(timezone=True), server_default=func.now())
 
-    nodes = relationship(argument: "storyNode", back_populates="story")
+    nodes = relationship("storyNode", back_populates="story")
 
 
 #for the storyname contesdt 
@@ -35,6 +35,6 @@ class storyNode(Base):
 
     options = Column(List[JSON],default=[])
 
-    story = relationship(argument:"story" ,back_populates="nodes")
+    story = relationship("story" ,back_populates="nodes")
 
 
